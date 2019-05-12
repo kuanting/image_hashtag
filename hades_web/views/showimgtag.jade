@@ -1,0 +1,116 @@
+doctype html
+html
+  head
+    title HADES Result
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    //if lte IE 8
+      script(src='css/ie/html5shiv.js')
+    script(src='js/jquery.min.js')
+    script(src='js/jquery.dropotron.min.js')
+    script(src='js/skel.min.js')
+    script(src='js/skel-layers.min.js')
+    script(src='js/init.js')
+    noscript
+      link(rel='stylesheet', href='css/skel.css')
+      link(rel='stylesheet', href='css/style.css')
+    //if lte IE 8
+      link(rel='stylesheet', href='css/ie/v8.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  body.no-sidebar
+    // Header
+    #header
+      .container
+        Logo
+        h1
+          a#logo HADES
+        // Nav
+        nav#nav
+          ul
+            li
+              a(href='/') Home
+            li
+              a(href='/aboutsystem') About HADES
+            li
+              a(href='/references') References
+    // Main
+    #main.wrapper.style1
+      .container
+        section
+          header.major
+            h2 Recommended Results
+            span.byline Please choose the tags relative to the given image. 
+            br
+            span.byline Your feedback is helpful for us. Thanks.
+
+                    
+          .row.no-collapse-1
+            section.6u
+              a.image.feature
+                img(src="#{imagePath}" alt="Image Title")
+            section.6u
+              form(action="/showimgtag", method="post")
+              each tag in tags
+                label.option1
+                  input(type='checkbox', name='tag1') 
+                  | ##{tag.one}
+                label.option2
+                  input(type='checkbox', name='tag2') 
+                  | ##{tag.two}
+                label.option3
+                  input(type='checkbox', name='tag3') 
+                  | ##{tag.three}
+                label.option4
+                  input(type='checkbox', name='tag4') 
+                  | ##{tag.four}
+                label.option5
+                  input(type='checkbox', name='tag5') 
+                  | ##{tag.five}
+                label.option1
+                  input(type='checkbox', name='tag6') 
+                  | ##{tag.six}
+                label.option2
+                  input(type='checkbox', name='tag7') 
+                  | ##{tag.seven}
+                label.option3
+                  input(type='checkbox', name='tag8') 
+                  | ##{tag.eight}
+                label.option4
+                  input(type='checkbox', name='tag9') 
+                  | ##{tag.nine}
+                label.option5
+                  input(type='checkbox', name='tag10') 
+                  | ##{tag.ten}
+                br
+                br
+                //| Gender:
+                //input(type='radio', name='location', value='male') 
+                //| Male 
+                //input(type='radio', name='location', value='Taoyuan')
+                //| Female
+                //br
+                label.option_submit
+                  input#submitFB(style='display:none;', type='submit')
+                  i.fa.fa-arrow-circle-right
+                  |  SUBMIT
+              br
+              br
+              br
+              p= success_info
+
+    
+
+    // Footer
+    #footer
+      // Copyright
+      .copyright
+        span 
+        a(href='http://arbor.ee.ntu.edu.tw/') Netwok Database Lab
+        | , National Taiwan University
+        br
+        span Author: Kuan-Ting Lai, Yu-Chi Chen, Chih-En Huang
+        br
+        span Advisor: 
+        | Professor 
+        a(href='http://arbor.ee.ntu.edu.tw/~mschen/') Ming-Syan Chen

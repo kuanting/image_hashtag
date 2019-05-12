@@ -1,0 +1,11 @@
+/* install instgram API first */
+pip install git+https://github.com/ping/instagram_private_api.git
+
+/* Start to crawl */
+python __init__.py -u USERNAME -p PASSWORD [-f TARGETFILE] [-t TARGET] [-o outputdir]
+python __init__.py -u ihcuy385 -p Ch29En -f 50top2018.txt -o ./50tags2018_1
+
+
+/* Extract tags from crawling outputdir */
+python extract_json.py [outputdir]
+python extract_json.py ./50tags2018_1

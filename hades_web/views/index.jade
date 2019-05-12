@@ -1,0 +1,132 @@
+doctype html
+html
+  head
+    title HADES
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    //if lte IE 8
+      script(src='css/ie/html5shiv.js')
+    script(src='js/jquery.min.js')
+    script(src='js/jquery.dropotron.min.js')
+    script(src='js/skel.min.js')
+    script(src='js/skel-layers.min.js')
+    script(src='js/init.js')
+    script(language='javascript').
+      function Change(){
+      console.log("d");
+      but1.style.background = #68d0e2;
+      }
+    noscript
+      link(rel='stylesheet', href='css/skel.css')
+      link(rel='stylesheet', href='css/style.css')
+    //if lte IE 8
+      link(rel='stylesheet', href='css/ie/v8.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  body.homepage
+    // Header
+    #header
+      .container
+        // Logo
+        // h1
+        //   a#logo HAREC
+        // Nav
+        nav#nav
+          ul
+            li
+              a(href='/') Home
+            li
+              a(href='/aboutsystem') About HADES
+            li
+              a(href='/references') References
+        // Banner
+        #banner
+          .container
+            section
+              header.major
+                h2 Welcome to HADES!
+                span.byline
+                  | HADES recommends 10 hashtags by uploading one image. 
+                  br
+                  | Roll down for more details or UPLOAD & START for experience!
+              // a.button.alt(href='/upload') START
+              form(ref='uploadForm', id='uploadForm', action="/", method="post", encType='multipart/form-data')
+                label#but1.upload_button
+                  input#sendFile(style='display:none;', type='file', name="sendFile", onclick='abc(1)')
+                  i.fa.fa-photo
+                  |  UPLOAD
+                label.button.alt
+                  input#start(style='display:none;', type='submit', onclick="Change()")
+                  i.fa.fa-send
+                  |  START
+
+    // Featured
+    .wrapper.style2
+      section.container
+        header.major
+          h2 Examples
+          span.byline Results of Hashtag Recommendation System
+        .row.no-collapse-1
+          section.4u
+            a.image.feature
+              img(src='images/pic02.jpg', alt='')
+            p #beach #sea #ocean #beachlife #sand #playa #wave #island #sunset #surf
+          section.4u
+            a.image.feature
+              img(src='images/pic03.jpg', alt='')
+            p #family #home #friend #boyfriend #brother #goodtimes #bestfriend #funny #laugh #amazing
+          section.4u
+            a.image.feature
+              img(src='images/pic04.jpg', alt='')
+            p #yummy #yum #instafood #foodstagram #foodie #delicious #foodpic #foodporn #foodpics #foodgasm
+    // Main
+    #main.wrapper.style1
+      section.container
+        header.major
+          h2 Advantages
+          span.byline Advantages of Hashtag Recommendation System
+        .row
+          // Content
+          .6u
+            section
+              ul.style
+                li
+                  span.fa.fa-refresh
+                  h3 Up-to-date Hashtags
+                  span
+                    | Recommend popular hashtags and increase exposure of the images and posts.
+                li
+                  span.fa.fa-instagram
+                  h3 Crawling data
+                  span
+                    | Crawl more data from Instagram and expand the benchmark.
+          .6u
+            section
+              ul.style
+                li
+                  span.fa.fa-book
+                  h3 Self-leaning
+                  span
+                    | Recommend popular hashtags used in Instagram regularly by self-leaning model.
+                li
+                  span.fa.fa-smile-o
+                  h3 User feedback
+                  span 
+                    | Add user feedback that can help us improving the quality of the system. 
+    // Footer
+    #footer
+      // Copyright
+      .copyright
+        span 
+        a(href='http://arbor.ee.ntu.edu.tw/') Netwok Database Lab
+        | , National Taiwan University
+        br
+        span Author: Kuan-Ting Lai, Yu-Chi Chen, Chih-En Huang
+        br
+        span Advisor: 
+        | Professor 
+        a(href='http://arbor.ee.ntu.edu.tw/~mschen/') Ming-Syan Chen
+        //br
+        //| DESIGN: REFERENCED BY 
+        //a(href='http://templated.co') TEMPLATED
+        //|  PHOTOS: YUCHI CHEN
