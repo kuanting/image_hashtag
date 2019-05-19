@@ -21,7 +21,7 @@ Image Hashtag Recommendation System
 $ ./Build.sh
 ```
 
-- Things in <strong>Build.sh</strong>:
+- Commands in <strong>Build.sh</strong>:
 ```c
 $ sudo service mongod start
 $ npm i
