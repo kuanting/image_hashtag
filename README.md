@@ -29,3 +29,6 @@ $ npm start //or node app.js
 ```
 
 - go to <strong>localhost:3000/</strong> in your browser
+
+## HADES model
+- saved in <strong>HashtagRec/Hashtag_end2end/</strong>
