@@ -12,10 +12,9 @@ html
     script(src='js/skel.min.js')
     script(src='js/skel-layers.min.js')
     script(src='js/init.js')
-    script(language='javascript').
-      function Change(){
-      console.log("d");
-      but1.style.background = #68d0e2;
+    script.
+      function showDiv() {
+      document.getElementById('loadingGif').style.display = "block";
       }
     noscript
       link(rel='stylesheet', href='css/skel.css')
@@ -46,20 +45,31 @@ html
               header.major
                 h2 Welcome to HADES!
                 span.byline
-                  | HADES recommends 10 hashtags by uploading one image. 
+                  //| HAshtag Recommendation via DEep Learning for Images in Social Networks
+                  //br
+                  | HADES recommends 10 hashtags by uploading one image.
                   br
-                  | Roll down for more details or UPLOAD & START for experience!
-              // a.button.alt(href='/upload') START
-              form(ref='uploadForm', id='uploadForm', action="/", method="post", encType='multipart/form-data')
-                label#but1.upload_button
-                  input#sendFile(style='display:none;', type='file', name="sendFile", onclick='abc(1)')
-                  i.fa.fa-photo
-                  |  UPLOAD
+                  | Roll down for more details or START for experience!
+              form(ref='uploadForm', id='Form', action="/", method="post", encType='multipart/form-data')
+                //label#but1.upload_button
+                //  input#sendFile(style='display:none;', type='file', name="sendFile", onclick='abc(1)')
+                //  i.fa.fa-photo
+                //  |  UPLOAD
+                //label.button.alt
+                //  input#start(style='display:none;', type='submit', onclick="Change()")
+                //  i.fa.fa-send
+                //  |  START
                 label.button.alt
-                  input#start(style='display:none;', type='submit', onclick="Change()")
-                  i.fa.fa-send
-                  |  START
-
+                    input(type='file',name="sendFile", style='display:none;', onchange='this.form.submit(); showDiv();')
+                    i.fa.fa-photo
+                    |  START
+              br
+              #loadingGif(style='display:none;')
+                | Loading...
+              //#loadingGif.cssload-wraper(style='display:none;')
+              //  .cssload-dots            
+              // #loadingGif(style='display:none')
+              //   img(src='https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') 
     // Featured
     .wrapper.style2
       section.container
@@ -121,10 +131,7 @@ html
         a(href='http://arbor.ee.ntu.edu.tw/') Netwok Database Lab
         | , National Taiwan University
         br
-        span Author: Kuan-Ting Lai, Yu-Chi Chen, Chih-En Huang
-        br
-        span Advisor: 
-        | Professor 
+        span Kuan-Ting Lai, Yu-Chi Chen, Chih-En Huang, Jyun-Jhu Syu, 
         a(href='http://arbor.ee.ntu.edu.tw/~mschen/') Ming-Syan Chen
         //br
         //| DESIGN: REFERENCED BY 

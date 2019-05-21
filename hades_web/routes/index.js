@@ -64,7 +64,7 @@ router.post("/", function(req, res){
             res.status(500).redirect("/");
          }
          else{
-                //debugFile = "success send a file";
+                //debugFile = "Upload successfully and Wait for the result...";
                 console.log(imageID);
                 const subprocess = runScript(imageID);
                 subprocess.stdout.on('data', (data) => {
@@ -79,8 +79,8 @@ router.post("/", function(req, res){
                 var session = req.session;
                 session.message = imageID;
                 now_time = d.getTime();
-                console.log(now_time - start_time);
-                sleep.sleep(4);
+                //console.log(now_time - start_time);
+                sleep.sleep(6);
                 res.redirect("/showimgtag");
                 
          }

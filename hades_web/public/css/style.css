@@ -500,12 +500,12 @@
 		padding: 0.50em 1em;
 		text-align: center;
 		text-decoration: none;
-		font-size: 1em;
+		font-size: 1.2em;
 		font-weight: 600;
-		min-width: 8em;
+		min-width: 6em;
 	}
 		.option1:hover {
-			background-color: #0d76c1;
+			background-color: #7d8e6f;
 		}
 	.option2 {
                 -moz-appearance: none;
@@ -530,12 +530,12 @@
                 padding: 0.50em 1em;
                 text-align: center;
                 text-decoration: none;
-                font-size: 1em;
+                font-size: 1.2em;
                 font-weight: 600;
-                min-width: 8em;
+                min-width: 6em;
         }
                 .option2:hover {
-                        background-color: #0d76c1;
+                        background-color: #f2bd37;
                 }
 	.option3 {
                 -moz-appearance: none;
@@ -560,12 +560,12 @@
                 padding: 0.50em 1em;
                 text-align: center;
                 text-decoration: none;
-                font-size: 1em;
+                font-size: 1.2em;
                 font-weight: 600;
-                min-width: 8em;
+                min-width: 6em;
         }
                 .option3:hover {
-                        background-color: #0d76c1;
+                        background-color: #5b84ad;
                 }
 	.option4 {
                 -moz-appearance: none;
@@ -590,12 +590,12 @@
                 padding: 0.50em 1em;
                 text-align: center;
                 text-decoration: none;
-                font-size: 1em;
+                font-size: 1.2em;
                 font-weight: 600;
-                min-width: 8em;
+                min-width: 6em;
         }
                 .option4:hover {
-                        background-color: #0d76c1;
+                        background-color: #d1524f;
                 }
 	.option5 {
                 -moz-appearance: none;
@@ -620,12 +620,12 @@
                 padding: 0.50em 1em;
                 text-align: center;
                 text-decoration: none;
-                font-size: 1em;
+                font-size: 1.2em;
                 font-weight: 600;
-                min-width: 8em;
+                min-width: 6em;
         }
                 .option5:hover {
-                        background-color: #0d76c1;
+                        background-color: #916e6f;
                 }
 
 /* Options submit */
@@ -642,7 +642,10 @@
 		transition: background-color 0.2s ease-in-out;
 		background: #3ac984;
                 border-radius: 40px;
-                border: 0;
+                border: 1em;
+                border-width:0.2em;
+                border-style:solid;
+                border-color: white;
                 color: white;
                 cursor: pointer;
                 display: inline-block;

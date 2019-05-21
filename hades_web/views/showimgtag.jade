@@ -12,6 +12,13 @@ html
     script(src='js/skel.min.js')
     script(src='js/skel-layers.min.js')
     script(src='js/init.js')
+    script.
+      function showDiv() {
+      document.getElementById('loadingGif').style.display = "block";
+      }
+      function submit_ok() {
+      document.getElementById('OK').style.display = "block";
+      }
     noscript
       link(rel='stylesheet', href='css/skel.css')
       link(rel='stylesheet', href='css/style.css')
@@ -24,7 +31,7 @@ html
       .container
         Logo
         h1
-          a#logo HADES
+          a(href='/')#logo HADES
         // Nav
         nav#nav
           ul
@@ -48,56 +55,57 @@ html
           .row.no-collapse-1
             section.6u
               a.image.feature
-                img(src="#{imagePath}" alt="Image Title")
+                img(src="#{imagePath}" alt="Cannot show the image.")
             section.6u
-              form(action="/showimgtag", method="post")
-              each tag in tags
-                label.option1
-                  input(type='checkbox', name='tag1') 
-                  | ##{tag.one}
-                label.option2
-                  input(type='checkbox', name='tag2') 
-                  | ##{tag.two}
-                label.option3
-                  input(type='checkbox', name='tag3') 
-                  | ##{tag.three}
-                label.option4
-                  input(type='checkbox', name='tag4') 
-                  | ##{tag.four}
-                label.option5
-                  input(type='checkbox', name='tag5') 
-                  | ##{tag.five}
-                label.option1
-                  input(type='checkbox', name='tag6') 
-                  | ##{tag.six}
-                label.option2
-                  input(type='checkbox', name='tag7') 
-                  | ##{tag.seven}
-                label.option3
-                  input(type='checkbox', name='tag8') 
-                  | ##{tag.eight}
-                label.option4
-                  input(type='checkbox', name='tag9') 
-                  | ##{tag.nine}
-                label.option5
-                  input(type='checkbox', name='tag10') 
-                  | ##{tag.ten}
+              form(action="/showimgtag/feedback", method="post", name="form")
+                each tag in tags
+                  label.option1
+                    input(type='checkbox', name='tag1') 
+                    | ##{tag.one}
+                  label.option2
+                    input(type='checkbox', name='tag2') 
+                    | ##{tag.two}
+                  label.option3
+                    input(type='checkbox', name='tag3') 
+                    | ##{tag.three}
+                  label.option4
+                    input(type='checkbox', name='tag4') 
+                    | ##{tag.four}
+                  label.option5
+                    input(type='checkbox', name='tag5') 
+                    | ##{tag.five}
+                  label.option1
+                    input(type='checkbox', name='tag6') 
+                    | ##{tag.six}
+                  label.option2
+                    input(type='checkbox', name='tag7') 
+                    | ##{tag.seven}
+                  label.option3
+                    input(type='checkbox', name='tag8') 
+                    | ##{tag.eight}
+                  label.option4
+                    input(type='checkbox', name='tag9') 
+                    | ##{tag.nine}
+                  label.option5
+                    input(type='checkbox', name='tag10') 
+                    | ##{tag.ten}
                 br
-                br
-                //| Gender:
-                //input(type='radio', name='location', value='male') 
-                //| Male 
-                //input(type='radio', name='location', value='Taoyuan')
-                //| Female
-                //br
+                br 
                 label.option_submit
-                  input#submitFB(style='display:none;', type='submit')
+                  //input(style='display:none;', type='submit')
+                  input(style='display:none;', type='submit', onclick='submit_ok();')
                   i.fa.fa-arrow-circle-right
                   |  SUBMIT
-              br
-              br
-              br
-              p= success_info
+              #OK(style='display:none;')
+                |        Submit successfully!
+
+              form(ref='uploadForm', id='Form', action="/", method="post", encType='multipart/form-data')
+                label.option_submit
+                    input(type='file',name="sendFile", style='display:none;', onchange='this.form.submit(); showDiv();')
+                    i.fa.fa-photo
+                    |  RESEND
+              #loadingGif(style='display:none;')
+                | Loading...
 
     
 
@@ -109,8 +117,5 @@ html
         a(href='http://arbor.ee.ntu.edu.tw/') Netwok Database Lab
         | , National Taiwan University
         br
-        span Author: Kuan-Ting Lai, Yu-Chi Chen, Chih-En Huang
-        br
-        span Advisor: 
-        | Professor 
+        span Kuan-Ting Lai, Yu-Chi Chen, Chih-En Huang, Jyun-Jhu Syu, 
         a(href='http://arbor.ee.ntu.edu.tw/~mschen/') Ming-Syan Chen

@@ -183,7 +183,17 @@ if __name__ == "__main__":
                 "seven": result[7],
                 "eight": result[8],
                 "nine": result[9],
-                "ten": result[10]
+                "ten": result[10],
+                "one_f": "0", 
+                "two_f": "0",
+                "three_f": "0", 
+                "four_f": "0", 
+                "five_f": "0",
+                "six_f": "0",
+                "seven_f": "0", 
+                "eight_f": "0",
+                "nine_f": "0", 
+                "ten_f": "0"
             })
         after_db = time.time()
         print("loading wordvec: ", after_wordvec-start_time)
