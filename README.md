@@ -1,5 +1,7 @@
-# image_hashtag
-HADES: HAshtag Recommendation via DEep Learning for Images in Social Networks
+# HADES: HAshtag Recommendation via DEep Learning for Images in Social Networks
+
+## Architecture
+
 
 ## HADES website
 ### Structure of Web server
