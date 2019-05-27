@@ -30,5 +30,5 @@ $ ./Build.sh
 ![image](pictures/results.png)
 
 ## Application
-Because hashtags are important advertising tools especially for images, using right hashtags can gain a lot of exposure and effectively promote one’s own brand. The following figure shows several keys to a successful promotion which HAEDS can help, according to [How to Grow Your Audience With Hashtags for Instagram](https://sproutsocial.com/insights/hashtags-for-instagram/).
+Recently, hashtags are important advertising tools especially for images. Using right hashtags can gain a lot of exposure and effectively promote one’s own brand. The following figure shows several keys to a successful promotion which HAEDS can help, according to [How to Grow Your Audience With Hashtags for Instagram](https://sproutsocial.com/insights/hashtags-for-instagram/).
 ![image](pictures/application.png)
