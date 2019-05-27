@@ -138,7 +138,7 @@ def testing(imageID, img_extractor, img2vec, word2idx, word_vec_dict, vec_matrix
 
 if __name__ == "__main__":
     start_time = time.time()
-    folder_dir = "/data/Hashtag/HARRISON/"
+    folder_dir = "./HARRISON/"
     filename = "tag_list.txt"
     args = command().parse_args()
 
