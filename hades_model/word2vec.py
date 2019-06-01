@@ -24,7 +24,7 @@ def command():
     parser.add_argument("-bs", "--batch_size", type=int, dest="bs",
                         help="batch_size of network, Default is 64", default=64)
     parser.add_argument("-epos", "--epochs", type=int, dest="epos",
-                        help="Numbers of epochs, Default is 1000", default=100)
+                        help="Numbers of epochs, Default is 100", default=100)
     parser.add_argument("-o", "--output", type=str, dest="output",
                         help="Path of output file, default is output/", default="output/")
     parser.add_argument("-lr", type=float, dest="lr",
