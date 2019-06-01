@@ -26,7 +26,7 @@ def command():
     parser.add_argument("-epos", "--epochs", type=int, dest="epos",
                         help="Numbers of epochs, Default is 100", default=100)
     parser.add_argument("-o", "--output", type=str, dest="output",
-                        help="Path of output file, default is output/", default="./")
+                        help="Path of output file, default is ./", default="./")
     parser.add_argument("-lr", type=float, dest="lr",
                         help="Default is 0.001", default=0.001)
     parser.add_argument("-w", "--skip_window", type=int, dest="w",
