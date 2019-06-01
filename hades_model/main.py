@@ -36,13 +36,13 @@ def command():
     parser.add_argument("-epos", "--epochs", type=int, dest="epos",
                         help="Numbers of epochs, Default is 100", default=100)
     parser.add_argument("-s", "--save", type=str, dest="save",
-                        help="Path of training model, default is model/", default="model/")
+                        help="Path of saving model, default is model/", default="model/")
     parser.add_argument("-th", "--threshold", type=int, dest="th",
                         help="threshold of word, default is 4", default=4)
     parser.add_argument("-lr", type=float, dest="lr",
                         help="Default is 1e-4", default=1e-4)
     parser.add_argument("-model_type", type=str, dest="mt",
-                        help="five types to choose", choices=['dnn', 'multi_label', 'devise', 'heracles'])
+                        help="four types to choose", choices=['dnn', 'multi_label', 'devise', 'heracles'])
     parser.add_argument("-end2end", type=str, dest="end2end", choices=['True', 'False'], default="False")
     return parser
 
