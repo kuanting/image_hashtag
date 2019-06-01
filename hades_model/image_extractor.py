@@ -82,8 +82,9 @@ def extractor_train(data, tag, folder_dir, USE_VGG):
 
 if __name__ == "__main__":
     ### Path of data ###
-    command = sys.argv[1]
-    USE_VGG = True if command=='True' else False
+    # command = sys.argv[1]
+    command = "True"
+    USE_VGG = True if command=="True" else False
     folder_dir = "/home/chihen/NTU/Research/Hashtag/HARRISON/"
     filename = "tag_list.txt"
     data = pd.read_csv(folder_dir+'data_list.txt', header=None).values
