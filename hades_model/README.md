@@ -20,7 +20,6 @@ Use skip-gram algorithm to build our word2vec model.
 	$ python word2vec.py
 
 ||| 
-|---|---|
 |parameters  |default|
 |-m |select mode, train or test, default is train|
 |-bs |  batch size, default is 64| 
