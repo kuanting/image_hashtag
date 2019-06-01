@@ -44,7 +44,14 @@ Use skip-gram algorithm to build our word2vec model.
 |-s| path of saving model, default is model/|
 |-lr|learning rate, default is 1e-4|
 |-model_type|four types can be choose, [dnn, multi_label, devise, heracles]|
-|-end2end|training end2end or not, default is False|
+|-end2end|training end-to-end or not, default is False|
 ||| 
 
+## Model Comparison
 
+|  |  non-end-to-end| end-to-end|
+|--|--|--|
+| DNN |  Train: 23.17% Test: 21.03% |  Train: 31.23% Test: 31.49%|
+| Multi-label| Train: 28.01% Test: 28.49% |  Train: 57.89% Test: 58.42%|
+| DeViSE| Train: 31.87% Test: 21.89% |  Train: 46.78% Test: 43.60%|
+| Heracles| Train: 27.29% Test: 20.56% |  X |
