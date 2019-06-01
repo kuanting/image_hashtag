@@ -26,7 +26,7 @@ def command():
     parser.add_argument("-epos", "--epochs", type=int, dest="epos",
                         help="Numbers of epochs, Default is 100", default=100)
     parser.add_argument("-o", "--output", type=str, dest="output",
-                        help="Path of output file, default is output/", default="output/")
+                        help="Path of output file, default is output/", default="./")
     parser.add_argument("-lr", type=float, dest="lr",
                         help="Default is 0.001", default=0.001)
     parser.add_argument("-w", "--skip_window", type=int, dest="w",
@@ -161,6 +161,7 @@ if __name__ == "__main__":
         _, embed_total = word2vec_model(total)
         embed_total = embed_total.reshape((len(corpus), -1))
         embed_total_numpy = embed_total.cpu().numpy()
+        output_path = os.path.join(args.output, 'wordvec.npz')
         # idx2wordvec = {idx:row for idx, row in enumerate(embed_total_numpy)}
-        np.savez('wordvec', wordvec=embed_total_numpy)
+        np.savez(output_path, wordvec=embed_total_numpy)
          
