@@ -26,7 +26,7 @@
     "ejs": "^0.8.8",
     "ejs-locals": "1.0.2",
     "express": "^4.14.0",
-    "express-fileupload": "0.0.5",
+    "express-fileupload": "1.1.9",
     "express-session": "^1.16.1",
     "formidable": "^1.2.1",
     "jade": "^1.11.0",
